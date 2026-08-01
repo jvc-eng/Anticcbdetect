@@ -17,6 +17,10 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Install Dependencies
+        run: |
+          brew install ldid
+
       - name: Setup Theos Environment
         run: |
           echo "THEOS=$GITHUB_WORKSPACE/theos" >> $GITHUB_ENV
